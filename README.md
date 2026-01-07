@@ -1,7 +1,17 @@
-
 # Data Warehouse and Analytics Project
 
 This project is a hands-on learning initiative focused on designing and building a data warehouse using SQL Server. It covers core data warehousing concepts such as data architecture, ETL pipelines, dimensional modeling, and analytics, following industry best practices. The project is designed primarily for learning and practice, while also serving as a portfolio project that demonstrates practical data engineering and analytics skills.
+
+---
+## 📌 Table of Contents
+- [Project Overview](#project-overview)
+- [Data Architecture](#data-architecture)
+- [Important Links & Tools](#important-links--tools)
+- [Project Requirements](#project-requirements)
+  - [Building the Data Warehouse](#building-the-data-warehouse)
+  - [BI: Analytics & Reporting](#bi-analytics-&-reporting)
+- [Repository Structure](#repository-structure)
+- [License](#license)
 
 ---
 ## 🏗️ Data Architecture
@@ -62,8 +72,6 @@ Develop SQL-based analytics to deliver detailed insights into:
 - **Sales Trends**
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
-
-For more details, refer to [docs/requirements.md](docs/requirements.md).
 
 ## 📂 Repository Structure
 ```
