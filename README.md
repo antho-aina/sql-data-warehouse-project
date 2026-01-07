@@ -4,12 +4,12 @@ This project is a hands-on learning initiative focused on designing and building
 
 ---
 ## 📌 Table of Contents
-- [Project Overview](#project-overview)
 - [Data Architecture](#data-architecture)
+- [Project Overview](#project-overview)
 - [Important Links & Tools](#important-links--tools)
 - [Project Requirements](#project-requirements)
   - [Building the Data Warehouse](#building-the-data-warehouse)
-  - [BI: Analytics & Reporting](#bi-analytics-&-reporting)
+  - [BI: Analytics & Reporting](#bi-analytics--reporting)
 - [Repository Structure](#repository-structure)
 - [License](#license)
 
