@@ -1,20 +1,15 @@
 # Data Warehouse and Analytics Project
 
-This project is a hands-on learning initiative focused on designing and building a data warehouse using SQL Server. It covers core data warehousing concepts such as data architecture, ETL pipelines, dimensional modeling, and analytics, following industry best practices. The project is designed primarily for learning and practice, while also serving as a portfolio project that demonstrates practical data engineering and analytics skills.
+This project is a hands-on learning initiative focused on designing and building a data warehouse using SQL Server. It covers core data warehousing concepts such as data architecture, ETL pipelines[...]
 
 ---
 ## 📌 Table of Contents
-- [Data Architecture](#-data-architecture)
-- [Project Overview](#-project-overview)
-- [Important Links & Tools](#-important-links--tools)
-- [Project Requirements](#-project-requirements)
-  - [Building the Data Warehouse](#building-the-data-warehouse-data-engineering)
-  - [BI: Analytics & Reporting](#bi-analytics--reporting-data-analysis)
-- [Repository Structure](#-repository-structure)
-- [License](#-license)
+- [Data Architecture](#data-architecture)
+- [Important Links & Tools](#important-links--tools)
+- [License](#license)
 
 ---
-## 🏗️ Data Architecture
+## Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 ![Data Architecture](docs/data_architecture.png)
@@ -35,11 +30,11 @@ This project involves:
 
 ---
 
-## 🛠️ Important Links & Tools
+## Important Links & Tools
 
 - **[Datasets](datasets/):** Access to the project dataset (csv files).
 - **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
+- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with data[...]
 - **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
 - **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
 - **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
@@ -67,8 +62,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 
 #### Objective
 Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
+- **Customer Behavior**n- **Product Performance**
 - **Sales Trends**
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
@@ -102,6 +96,6 @@ data-warehouse-project/
 ---
 
 
-## 🛡️ License
+## License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
