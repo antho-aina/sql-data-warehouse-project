@@ -34,9 +34,9 @@ BEGIN
 		-- Loading silver.crm_cust_info
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_cust_info';
-		TRUNCATE TABLE DataWarehouse.silver.crm_cust_info;
+		TRUNCATE TABLE silver.crm_cust_info;
 		PRINT '>> Inserting Data Into: silver.crm_cust_info';
-		INSERT INTO DataWarehouse.silver.crm_cust_info (
+		INSERT INTO silver.crm_cust_info (
 			cst_id, 
 			cst_key, 
 			cst_firstname, 
@@ -65,7 +65,7 @@ BEGIN
 			SELECT
 				*,
 				ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
-			FROM DataWarehouse.bronze.crm_cust_info
+			FROM bronze.crm_cust_info
 			WHERE cst_id IS NOT NULL
 		) t
 		WHERE flag_last = 1; -- Select the most recent record per customer
@@ -76,9 +76,9 @@ BEGIN
 		-- Loading silver.crm_prd_info
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_prd_info';
-		TRUNCATE TABLE DataWarehouse.silver.crm_prd_info;
+		TRUNCATE TABLE silver.crm_prd_info;
 		PRINT '>> Inserting Data Into: silver.crm_prd_info';
-		INSERT INTO DataWarehouse.silver.crm_prd_info (
+		INSERT INTO silver.crm_prd_info (
 			prd_id,
 			cat_id,
 			prd_key,
@@ -106,7 +106,7 @@ BEGIN
 				LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) - 1 
 				AS DATE
 			) AS prd_end_dt -- Calculate end date as one day before the next start date
-		FROM DataWarehouse.bronze.crm_prd_info;
+		FROM bronze.crm_prd_info;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -114,9 +114,9 @@ BEGIN
         -- Loading crm_sales_details
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_sales_details';
-		TRUNCATE TABLE DataWarehouse.silver.crm_sales_details;
+		TRUNCATE TABLE silver.crm_sales_details;
 		PRINT '>> Inserting Data Into: silver.crm_sales_details';
-		INSERT INTO DataWarehouse.silver.crm_sales_details (
+		INSERT INTO silver.crm_sales_details (
 			sls_ord_num,
 			sls_prd_key,
 			sls_cust_id,
@@ -154,7 +154,7 @@ BEGIN
 					THEN sls_sales / NULLIF(sls_quantity, 0)
 				ELSE sls_price  -- Derive price if original value is invalid
 			END AS sls_price
-		FROM DataWarehouse.bronze.crm_sales_details;
+		FROM bronze.crm_sales_details;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -162,9 +162,9 @@ BEGIN
         -- Loading erp_cust_az12
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_cust_az12';
-		TRUNCATE TABLE DataWarehouse.silver.erp_cust_az12;
+		TRUNCATE TABLE silver.erp_cust_az12;
 		PRINT '>> Inserting Data Into: silver.erp_cust_az12';
-		INSERT INTO DataWarehouse.silver.erp_cust_az12 (
+		INSERT INTO silver.erp_cust_az12 (
 			cid,
 			bdate,
 			gen
@@ -183,7 +183,7 @@ BEGIN
 				WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
 				ELSE 'n/a'
 			END AS gen -- Normalize gender values and handle unknown cases
-		FROM DataWarehouse.bronze.erp_cust_az12;
+		FROM bronze.erp_cust_az12;
 	    SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -195,9 +195,9 @@ BEGIN
         -- Loading erp_loc_a101
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_loc_a101';
-		TRUNCATE TABLE DataWarehouse.silver.erp_loc_a101;
+		TRUNCATE TABLE silver.erp_loc_a101;
 		PRINT '>> Inserting Data Into: silver.erp_loc_a101';
-		INSERT INTO DataWarehouse.silver.erp_loc_a101 (
+		INSERT INTO silver.erp_loc_a101 (
 			cid,
 			cntry
 		)
@@ -209,7 +209,7 @@ BEGIN
 				WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'n/a'
 				ELSE TRIM(cntry)
 			END AS cntry -- Normalize and Handle missing or blank country codes
-		FROM DataWarehouse.bronze.erp_loc_a101;
+		FROM bronze.erp_loc_a101;
 	    SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -217,9 +217,9 @@ BEGIN
 		-- Loading erp_px_cat_g1v2
 		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_px_cat_g1v2';
-		TRUNCATE TABLE DataWarehouse.silver.erp_px_cat_g1v2;
+		TRUNCATE TABLE silver.erp_px_cat_g1v2;
 		PRINT '>> Inserting Data Into: silver.erp_px_cat_g1v2';
-		INSERT INTO DataWarehouse.silver.erp_px_cat_g1v2 (
+		INSERT INTO silver.erp_px_cat_g1v2 (
 			id,
 			cat,
 			subcat,
@@ -230,7 +230,7 @@ BEGIN
 			cat,
 			subcat,
 			maintenance
-		FROM DataWarehouse.bronze.erp_px_cat_g1v2;
+		FROM bronze.erp_px_cat_g1v2;
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
