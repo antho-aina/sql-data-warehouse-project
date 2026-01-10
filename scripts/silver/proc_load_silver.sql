@@ -93,7 +93,7 @@ BEGIN
 			REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id, -- Extract category ID
 			SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,        -- Extract product key
 			prd_nm,
-			ISNULL(prd_cost, 0) AS prd_cost,
+			ISNULL(prd_cost, 0) AS prd_cost, -- Set NULL value to 0
 			CASE 
 				WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
 				WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
@@ -134,15 +134,15 @@ BEGIN
 			CASE 
 				WHEN sls_order_dt = 0 OR LEN(sls_order_dt) != 8 THEN NULL
 				ELSE CAST(CAST(sls_order_dt AS VARCHAR) AS DATE)
-			END AS sls_order_dt,
+			END AS sls_order_dt, -- Check invalid value of date format and change datatype to DATE 
 			CASE 
 				WHEN sls_ship_dt = 0 OR LEN(sls_ship_dt) != 8 THEN NULL
 				ELSE CAST(CAST(sls_ship_dt AS VARCHAR) AS DATE)
-			END AS sls_ship_dt,
+			END AS sls_ship_dt, -- Check invalid value of date format and change datatype to DATE 
 			CASE 
 				WHEN sls_due_dt = 0 OR LEN(sls_due_dt) != 8 THEN NULL
 				ELSE CAST(CAST(sls_due_dt AS VARCHAR) AS DATE)
-			END AS sls_due_dt,
+			END AS sls_due_dt, -- Check invalid value of date format and change datatype to DATE 
 			CASE 
 				WHEN sls_sales IS NULL OR sls_sales <= 0 OR sls_sales != sls_quantity * ABS(sls_price) 
 					THEN sls_quantity * ABS(sls_price)
