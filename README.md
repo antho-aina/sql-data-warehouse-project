@@ -12,6 +12,7 @@ This project is a hands-on learning initiative focused on designing and building
   - [BI: Analytics & Reporting](#bi-analytics--reporting-data-analysis)
 - [Repository Structure](#-repository-structure)
 - [License](#license)
+- [About Me](#-about-me)
 
 ---
 ## Data Architecture
@@ -99,7 +100,17 @@ data-warehouse-project/
 ```
 ---
 
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## 👋 About Me
+
+I am an aspiring Data Analyst with a strong interest in business strategy and decision-making.
+My goal is to help organizations scale and optimize their performance through data-driven insights.
+
+Let's stay in touch! Feel free to connect with me on the following platforms:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/anthony-fenoniaina)
+
+---
