@@ -3,9 +3,20 @@
 This project is a hands-on learning initiative focused on designing and building a data warehouse using SQL Server. It covers core data warehousing concepts such as data architecture, ETL pipelines[...]
 
 ---
+
+## 📖 Project Overview
+
+This project involves:
+
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+
+---
+
 ## 📌 Table of Contents
 - [Data Architecture](#data-architecture)
-- [Project Overview](#-project-overview)
 - [Important Links & Tools](#important-links--tools)
 - [Project Requirements](#-project-requirements)
   - [Building the Data Warehouse](#building-the-data-warehouse-data-engineering)
@@ -15,6 +26,7 @@ This project is a hands-on learning initiative focused on designing and building
 - [About Me](#-about-me)
 
 ---
+
 ## Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
@@ -23,16 +35,6 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
-
----
-## 📖 Project Overview
-
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
 
 ---
 
@@ -72,6 +74,14 @@ Develop SQL-based analytics to deliver detailed insights into:
 - **Sales Trends**
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+
+➡️ **Data Analytics & Reporting Repository**  
+[![GitHub Repo](https://img.shields.io/badge/github-repo-blue?logo=github)]([https://github.com/your-username/your-repo](https://github.com/antho-aina/sql-data-analytics-project.git))
+
+📌 This repository focuses exclusively on data engineering and warehouse design.
+All analytical queries, KPIs, and reporting logic are intentionally implemented in the downstream analytics project.
+
+---
 
 ## 📂 Repository Structure
 ```
