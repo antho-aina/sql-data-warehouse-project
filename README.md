@@ -4,17 +4,8 @@ This project is a hands-on learning initiative focused on designing and building
 
 ---
 
-## 📖 Project Overview
-
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-
----
-
 ## 📌 Table of Contents
+- [Project Overview](#-project-overview)
 - [Data Architecture](#data-architecture)
 - [Important Links & Tools](#important-links--tools)
 - [Project Requirements](#-project-requirements)
@@ -23,6 +14,16 @@ This project involves:
 - [Repository Structure](#-repository-structure)
 - [License](#license)
 - [About Me](#-about-me)
+
+---
+
+## 📖 Project Overview
+
+This project involves:
+
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 
 ---
 
