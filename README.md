@@ -76,7 +76,8 @@ Develop SQL-based analytics to deliver detailed insights into:
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
 
 ➡️ **Data Analytics & Reporting Repository**  
-[![GitHub Repo](https://img.shields.io/badge/github-repo-blue?logo=github)]([https://github.com/your-username/your-repo](https://github.com/antho-aina/sql-data-analytics-project.git))
+
+[![GitHub Repo](https://img.shields.io/badge/Github-Repo-blue?logo=github)](https://github.com/antho-aina/sql-data-analytics-project.git)
 
 📌 This repository focuses exclusively on data engineering and warehouse design.
 All analytical queries, KPIs, and reporting logic are intentionally implemented in the downstream analytics project.
